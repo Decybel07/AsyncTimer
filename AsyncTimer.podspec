@@ -11,7 +11,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/Decybel07/AsyncTimer'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
-  s.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => s.version }
+  s.source           = { :git => "https://github.com/Decybel07/AsyncTimer.git", :tag => s.version }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
