@@ -4,10 +4,6 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'AsyncTimer is an asynchronous timer that can work in the background.'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
   s.homepage         = 'https://github.com/Decybel07/AsyncTimer'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }

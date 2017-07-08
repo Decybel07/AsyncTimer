@@ -10,7 +10,7 @@ import UIKit
 import AsyncTimer
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var countDownLabel: UILabel!
     
     var timer: AsyncTimer!
@@ -18,12 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.timer = AsyncTimer(interval: .milliseconds(100), times: 600, block: { [weak self] count in
+        self.timer = AsyncTimer(interval: .milliseconds(1), times: 5000, block: { [weak self] count in
             self?.countDownLabel.text = count.description
+            print(count.description)
         })
     }
-
-
+    
+    
     @IBAction func start(_: Any) {
         self.timer.start()
     }
@@ -35,6 +36,4 @@ class ViewController: UIViewController {
     @IBAction func restart(_: Any) {
         self.timer.restart()
     }
-
 }
-
