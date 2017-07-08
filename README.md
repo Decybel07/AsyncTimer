@@ -9,11 +9,6 @@
 [![codebeat badge](https://codebeat.co/badges/648d2a8b-2cb5-4956-b19c-454dc35912fd)](https://codebeat.co/projects/github-com-decybel07-asynctimer-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63d5b063f7ba44dfb4d96447886aff3a)](https://www.codacy.com/app/Decybel07/AsyncTimer/dashboard)
 
-[![CI Status](http://img.shields.io/travis/decybel07/AsyncTimer.svg?style=flat)](https://travis-ci.org/decybel07/AsyncTimer)
-[![Version](https://img.shields.io/cocoapods/v/AsyncTimer.svg?style=flat)](http://cocoapods.org/pods/AsyncTimer)
-[![License](https://img.shields.io/cocoapods/l/AsyncTimer.svg?style=flat)](http://cocoapods.org/pods/AsyncTimer)
-[![Platform](https://img.shields.io/cocoapods/p/AsyncTimer.svg?style=flat)](http://cocoapods.org/pods/AsyncTimer)
-
 ## ⚠️ Requirements
 
 - iOS 9.0+ | macOS 10.10+ | tvOS 9.0+ | watchOS 2.0+
