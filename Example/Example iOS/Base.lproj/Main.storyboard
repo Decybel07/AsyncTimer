@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder referencedIdentifier="Test" id="scu-qP-YFK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv0-qP-JMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="-936"/>
+            <point key="canvasLocation" x="1511" y="-914"/>
         </scene>
         <!--Title-->
         <scene sceneID="tne-QT-ifu">

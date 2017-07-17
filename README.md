@@ -25,19 +25,19 @@
 ### [CocoaPods](http://cocoapods.org)
 
 ```ruby
-pod 'AsyncTimer', '~> 1.0'
+pod 'AsyncTimer', '~> 2.0'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/AsyncTimer", ~> 1.0
+github "Decybel07/AsyncTimer", ~> 2.0
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
 
 ```swift
-.Package(url: "https://github.com/Decybel07/AsyncTimer.git", majorVersion: 1)
+.Package(url: "https://github.com/Decybel07/AsyncTimer.git", majorVersion: 2)
 ```
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/AsyncTimer/)

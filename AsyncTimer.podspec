@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AsyncTimer'
-  s.version          = '1.0.0'
+  s.version          = '2.0.0'
   s.summary          = 'AsyncTimer is an asynchronous timer that can work in the background.'
 
   s.homepage         = 'https://github.com/Decybel07/AsyncTimer'

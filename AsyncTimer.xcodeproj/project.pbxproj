@@ -11,10 +11,10 @@
 		2D9454BA1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
 		2D9454BB1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
 		2D9454BC1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
-		2D9454C31F0972020091BD6B /* AsyncTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */; };
-		2D9454C41F0972020091BD6B /* AsyncTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */; };
-		2D9454C51F0972020091BD6B /* AsyncTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */; };
-		2D9454C61F0972020091BD6B /* AsyncTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */; };
+		2D94555F1F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
+		2D9455601F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
+		2D9455611F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
+		2D9455621F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
 		2DD9D5971EFAEBDB005BFB68 /* AsyncTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD9D5951EFAEBDB005BFB68 /* AsyncTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DD9D5981EFAEBDB005BFB68 /* AsyncTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD9D5951EFAEBDB005BFB68 /* AsyncTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DD9D5991EFAEBDB005BFB68 /* AsyncTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD9D5951EFAEBDB005BFB68 /* AsyncTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,12 +31,12 @@
 
 /* Begin PBXFileReference section */
 		2D9454B81F092D390091BD6B /* Terminator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminator.swift; sourceTree = "<group>"; };
-		2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTimeInterval.swift; sourceTree = "<group>"; };
 		2D9454C81F097A580091BD6B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2D9454C91F097A580091BD6B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		2D9454CA1F097A580091BD6B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D9454CB1F097A8C0091BD6B /* AsyncTimer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AsyncTimer.podspec; sourceTree = "<group>"; };
 		2D9454CC1F097AB70091BD6B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		2D94555E1F1B408D0091BD6B /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		2DD9D5571EFAEABA005BFB68 /* AsyncTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD9D5721EFAEB40005BFB68 /* AsyncTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD9D57F1EFAEB59005BFB68 /* AsyncTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,8 +108,8 @@
 				2DD9D5951EFAEBDB005BFB68 /* AsyncTimer.h */,
 				2DD9D5961EFAEBDB005BFB68 /* Info.plist */,
 				2DD9D59F1EFAED77005BFB68 /* AsyncTimer.swift */,
-				2D9454C21F0972020091BD6B /* AsyncTimeInterval.swift */,
 				2D9454B81F092D390091BD6B /* Terminator.swift */,
+				2D94555E1F1B408D0091BD6B /* Counter.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "";
+				ORGANIZATIONNAME = "Adrian Bobrowski (Decybel07), adrian071993@gmail.com";
 				TargetAttributes = {
 					2DD9D5561EFAEABA005BFB68 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -315,8 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D94555F1F1B408D0091BD6B /* Counter.swift in Sources */,
 				2D9454B91F092D390091BD6B /* Terminator.swift in Sources */,
-				2D9454C31F0972020091BD6B /* AsyncTimeInterval.swift in Sources */,
 				2DD9D5A01EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,8 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9455601F1B408D0091BD6B /* Counter.swift in Sources */,
 				2D9454BA1F092D390091BD6B /* Terminator.swift in Sources */,
-				2D9454C41F0972020091BD6B /* AsyncTimeInterval.swift in Sources */,
 				2DD9D5A11EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,8 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9455611F1B408D0091BD6B /* Counter.swift in Sources */,
 				2D9454BB1F092D390091BD6B /* Terminator.swift in Sources */,
-				2D9454C51F0972020091BD6B /* AsyncTimeInterval.swift in Sources */,
 				2DD9D5A21EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,8 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9455621F1B408D0091BD6B /* Counter.swift in Sources */,
 				2D9454BC1F092D390091BD6B /* Terminator.swift in Sources */,
-				2D9454C61F0972020091BD6B /* AsyncTimeInterval.swift in Sources */,
 				2DD9D5A31EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
