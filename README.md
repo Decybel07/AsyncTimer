@@ -9,6 +9,21 @@
 [![codebeat badge](https://codebeat.co/badges/648d2a8b-2cb5-4956-b19c-454dc35912fd)](https://codebeat.co/projects/github-com-decybel07-asynctimer-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63d5b063f7ba44dfb4d96447886aff3a)](https://www.codacy.com/app/Decybel07/AsyncTimer/dashboard)
 
+## 🌟 Features
+
+- [x] Can work as a countdown timer
+- [x] Can work as a periodic Timer
+- [x] Can work as a scheduled timer
+- [x] Working with user events (like: scrolling, tapping, ...)
+- [x] Functionality (start, stop, restart)
+- [x] Support for clousure (never more selectors)
+
+## 💻 Demo
+
+```ruby
+pod try AsyncTimer
+```
+
 ## ⚠️ Requirements
 
 - iOS 9.0+ | macOS 10.10+ | tvOS 9.0+ | watchOS 2.0+
