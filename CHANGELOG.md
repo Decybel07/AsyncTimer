@@ -1,7 +1,7 @@
 
 # Change Log
 
-## [2.0.1](https://github.com/Decybel07/L10n-swift/tree/2.0.0) (2017-08-12)
+## [2.0.1](https://github.com/Decybel07/L10n-swift/tree/2.0.1) (2017-08-12)
 * Create example project
 * Add `Usage` section to `README`
 * bugfix with `ScheduledTimer`
