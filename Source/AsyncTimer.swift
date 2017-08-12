@@ -35,13 +35,11 @@ open class AsyncTimer {
         repeats: Bool = false,
         block: @escaping () -> Void = {}
     ) {
-        self.init(
-            queue: queue,
-            interval: interval,
-            counter: repeats ? .infinity : .down(1),
-            block: { _ in block() },
-            completion: {}
-        )
+        if repeats {
+            self.init(queue: queue, interval: interval, counter: .infinity, block: { _ in block() }, completion: {})
+        } else {
+            self.init(queue: queue, interval: interval, counter: .down(1), block: { _ in }, completion: block)
+        }
     }
 
     /**
@@ -62,13 +60,7 @@ open class AsyncTimer {
         block: @escaping (Int) -> Void = { _ in },
         completion: @escaping () -> Void = {}
     ) {
-        self.init(
-            queue: queue,
-            interval: interval,
-            counter: .down(times),
-            block: block,
-            completion: completion
-        )
+        self.init(queue: queue, interval: interval, counter: .down(times), block: block, completion: completion)
     }
 
     private init(
