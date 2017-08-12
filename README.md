@@ -71,11 +71,11 @@ AsyncTimer(interval: .milliseconds(100), repeats: true) {
 
 ### Scheduled Timer
 
-After 2 seconds do something
+Do something after 2 seconds
 
 ```swift
-return AsyncTimer(interval: .seconds(2)) { [weak self] in
-    print("finished")
+return AsyncTimer(interval: .seconds(2)) {
+    print("something to do")
 }
 ```
 
