@@ -74,7 +74,7 @@ AsyncTimer(interval: .milliseconds(100), repeats: true) {
 Do something after 2 seconds
 
 ```swift
-return AsyncTimer(interval: .seconds(2)) {
+AsyncTimer(interval: .seconds(2)) {
     print("something to do")
 }
 ```
