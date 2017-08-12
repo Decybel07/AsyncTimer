@@ -1,19 +1,28 @@
 
-Pod::Spec.new do |s|
-  s.name             = 'AsyncTimer'
-  s.version          = '2.0.0'
-  s.summary          = 'AsyncTimer is an asynchronous timer that can work in the background.'
+Pod::Spec.new do |spec|
+  spec.name             = 'AsyncTimer'
+  spec.version          = '2.0.1'
+  spec.summary          = 'AsyncTimer is a precision asynchronous timer. You can also use it as a countdown timer'
 
-  s.homepage         = 'https://github.com/Decybel07/AsyncTimer'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
-  s.source           = { :git => "https://github.com/Decybel07/AsyncTimer.git", :tag => s.version }
+  spec.description      = <<-DESC
+    AsyncTimer is a pod that adds precision asynchronous timer to your app
+      * Working with user events (like: scrolling, tapping, ...).
+      * Functionality (start, stop, restart)
+      * Support for clousure (never more selectors)
+      * Can work as a countdown timer
+      * Can work in background.
+                       DESC
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
+  spec.homepage         = 'https://github.com/Decybel07/AsyncTimer'
+  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
+  spec.source           = { :git => "https://github.com/Decybel07/AsyncTimer.git", :tag => spec.version }
 
-  s.source_files = 'Source/**/*.swift'
-  s.frameworks = 'Foundation'
+  spec.ios.deployment_target = '9.0'
+  spec.osx.deployment_target = '10.10'
+  spec.tvos.deployment_target = '9.0'
+  spec.watchos.deployment_target = '2.0'
+
+  spec.source_files = 'Source/**/*.swift'
+  spec.frameworks = 'Foundation'
 end

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7C3FADF65D64AC6848737CADCBF3F1D493851DCC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5210F21B8E5E4ED0844D470D7561650484D4BD70" : 9223372036854775807,
+    "7C3FADF65D64AC6848737CADCBF3F1D493851DCC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "85962973-E289-4896-9924-06E24D987D2C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5210F21B8E5E4ED0844D470D7561650484D4BD70" : "",
+    "7C3FADF65D64AC6848737CADCBF3F1D493851DCC" : "AsyncTimer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AsyncTimer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AsyncTimer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:CodingLifestyleProjects\/Sudoku.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5210F21B8E5E4ED0844D470D7561650484D4BD70"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Decybel07\/AsyncTimer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7C3FADF65D64AC6848737CADCBF3F1D493851DCC"
+    }
+  ]
+}
