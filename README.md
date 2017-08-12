@@ -42,6 +42,63 @@ github "Decybel07/AsyncTimer", ~> 2.0
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/AsyncTimer/)
 
+### Countdown Timer
+
+Counts down from 25 to 0 every 100 ms
+
+```swift
+AsyncTimer(
+    interval: .milliseconds(100),
+    times: 25,
+    block: { value in
+        print(value)
+    }, 
+    completion: { value in
+        print("finished")
+    }
+)
+```
+
+### Periodic Timer
+
+Update every 100 ms
+
+```swift
+AsyncTimer(interval: .milliseconds(100), repeats: true) { 
+    print("updated")
+}
+```
+
+### Scheduled Timer
+
+After 2 seconds do something
+
+```swift
+return AsyncTimer(interval: .seconds(2)) { [weak self] in
+    print("finished")
+}
+```
+
+### Functionalities
+
+#### Start the timer
+
+```swift
+timer.start()
+```
+
+#### Stop the timer
+
+```swift
+timer.stop()
+```
+
+#### Resrart the timer
+
+```swift
+timer.restart()
+```
+
 ## 🤓 Author
 
 Adrian Bobrowski ([Decybel07](https://github.com/Decybel07)), adrian071993@gmail.com
