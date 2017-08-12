@@ -5,24 +5,17 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "5210F21B8E5E4ED0844D470D7561650484D4BD70" : 9223372036854775807,
-    "458F7CEF69F3D519B3B704281A1BCC258439053C" : 9223372036854775807,
     "7C3FADF65D64AC6848737CADCBF3F1D493851DCC" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "971CDAE1-309E-4941-81D1-D01C3D90D6B0",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F789F086-E4B0-452C-B5E8-33BBAC072B88",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "5210F21B8E5E4ED0844D470D7561650484D4BD70" : "",
-    "458F7CEF69F3D519B3B704281A1BCC258439053C" : "L10n-swift\/",
     "7C3FADF65D64AC6848737CADCBF3F1D493851DCC" : "AsyncTimer\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "AsyncTimer",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Example",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AsyncTimer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/Example.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Decybel07\/L10n-swift.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "458F7CEF69F3D519B3B704281A1BCC258439053C"
-    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:CodingLifestyleProjects\/Sudoku.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

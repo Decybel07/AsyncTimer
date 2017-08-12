@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6728A81F3F27B0000B2BEE /* CountdownTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6728A31F3F27B0000B2BEE /* CountdownTimerViewController.swift */; };
+		2D6728AA1F3F27B0000B2BEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6728A61F3F27B0000B2BEE /* LaunchScreen.storyboard */; };
+		2D6728AB1F3F27B0000B2BEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6728A71F3F27B0000B2BEE /* Main.storyboard */; };
+		2D6728AD1F3F3753000B2BEE /* ScheduledTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6728AC1F3F3753000B2BEE /* ScheduledTimerViewController.swift */; };
+		2D6728C81F3F40FC000B2BEE /* PeriodicTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6728C71F3F40FC000B2BEE /* PeriodicTimerViewController.swift */; };
 		2D9454A71F0918890091BD6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454A61F0918890091BD6B /* AppDelegate.swift */; };
-		2D9454A91F0918890091BD6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454A81F0918890091BD6B /* ViewController.swift */; };
-		2D9454AC1F0918890091BD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9454AA1F0918890091BD6B /* Main.storyboard */; };
 		2D9454AE1F0918890091BD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9454AD1F0918890091BD6B /* Assets.xcassets */; };
-		2D9454B11F0918890091BD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9454AF1F0918890091BD6B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D6728A31F3F27B0000B2BEE /* CountdownTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimerViewController.swift; sourceTree = "<group>"; };
+		2D6728A61F3F27B0000B2BEE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D6728A71F3F27B0000B2BEE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2D6728AC1F3F3753000B2BEE /* ScheduledTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledTimerViewController.swift; sourceTree = "<group>"; };
+		2D6728C71F3F40FC000B2BEE /* PeriodicTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicTimerViewController.swift; sourceTree = "<group>"; };
 		2D9454901F09186B0091BD6B /* AsyncTimer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AsyncTimer.xcodeproj; path = ../AsyncTimer.xcodeproj; sourceTree = "<group>"; };
 		2D9454A31F0918890091BD6B /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9454A61F0918890091BD6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D9454A81F0918890091BD6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2D9454AB1F0918890091BD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D9454AD1F0918890091BD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2D9454B01F0918890091BD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D9454B21F0918890091BD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D6728A21F3F27B0000B2BEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D6728A31F3F27B0000B2BEE /* CountdownTimerViewController.swift */,
+				2D6728AC1F3F3753000B2BEE /* ScheduledTimerViewController.swift */,
+				2D6728C71F3F40FC000B2BEE /* PeriodicTimerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D6728A51F3F27B0000B2BEE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2D6728A61F3F27B0000B2BEE /* LaunchScreen.storyboard */,
+				2D6728A71F3F27B0000B2BEE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		2D9454891F09185D0091BD6B = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +128,10 @@
 		2D9454A51F0918890091BD6B /* Example iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2D6728A21F3F27B0000B2BEE /* Controllers */,
+				2D6728A51F3F27B0000B2BEE /* Storyboards */,
 				2D9454A61F0918890091BD6B /* AppDelegate.swift */,
-				2D9454A81F0918890091BD6B /* ViewController.swift */,
-				2D9454AA1F0918890091BD6B /* Main.storyboard */,
 				2D9454AD1F0918890091BD6B /* Assets.xcassets */,
-				2D9454AF1F0918890091BD6B /* LaunchScreen.storyboard */,
 				2D9454B21F0918890091BD6B /* Info.plist */,
 			);
 			path = "Example iOS";
@@ -211,9 +233,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9454B11F0918890091BD6B /* LaunchScreen.storyboard in Resources */,
+				2D6728AB1F3F27B0000B2BEE /* Main.storyboard in Resources */,
 				2D9454AE1F0918890091BD6B /* Assets.xcassets in Resources */,
-				2D9454AC1F0918890091BD6B /* Main.storyboard in Resources */,
+				2D6728AA1F3F27B0000B2BEE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9454A91F0918890091BD6B /* ViewController.swift in Sources */,
+				2D6728A81F3F27B0000B2BEE /* CountdownTimerViewController.swift in Sources */,
+				2D6728C81F3F40FC000B2BEE /* PeriodicTimerViewController.swift in Sources */,
 				2D9454A71F0918890091BD6B /* AppDelegate.swift in Sources */,
+				2D6728AD1F3F3753000B2BEE /* ScheduledTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,25 +262,6 @@
 			targetProxy = 2D9454B61F091D4C0091BD6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2D9454AA1F0918890091BD6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D9454AB1F0918890091BD6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2D9454AF1F0918890091BD6B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D9454B01F0918890091BD6B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2D94548E1F09185D0091BD6B /* Debug */ = {
@@ -397,6 +402,7 @@
 				2D9454B51F0918890091BD6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
