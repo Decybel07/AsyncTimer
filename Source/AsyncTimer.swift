@@ -17,7 +17,29 @@ open class AsyncTimer {
 
     private let block: (Int) -> Void
     private let completion: () -> Void
-    private weak var terminator: Terminator?
+    private var terminator: Terminator?
+
+    /// A Boolean value that determines whether the timer is paused.
+    public var isPaused: Bool {
+        return self.terminator?.paused ?? false
+    }
+
+    /// A Boolean value that determines whether the timer is stopped.
+    public var isStopped: Bool {
+        return self.terminator == nil
+    }
+
+    /// A Boolean value that determines whether the timer is running.
+    public var isRunning: Bool {
+        return !(self.isStopped || self.isPaused)
+    }
+
+    public var left: Int? {
+        if let counter = self.terminator?.counter, case let .down(value) = counter {
+            return value
+        }
+        return nil
+    }
 
     /**
      Initialize a new AsyncTimer. A timer waits until a certain time **interval** has elapsed and then call the **block** clause.
@@ -36,9 +58,9 @@ open class AsyncTimer {
         block: @escaping () -> Void = {}
     ) {
         if repeats {
-            self.init(queue: queue, interval: interval, counter: .infinity, block: { _ in block() }, completion: {})
+            self.init(queue: queue, interval: interval, counter: .infinity, block: { _ in block() })
         } else {
-            self.init(queue: queue, interval: interval, counter: .down(1), block: { _ in }, completion: block)
+            self.init(queue: queue, interval: interval, counter: .down(1), completion: block)
         }
     }
 
@@ -67,8 +89,8 @@ open class AsyncTimer {
         queue: DispatchQueue,
         interval: DispatchTimeInterval,
         counter: Counter,
-        block: @escaping (Int) -> Void,
-        completion: @escaping () -> Void
+        block: @escaping (Int) -> Void = { _ in },
+        completion: @escaping () -> Void = {}
     ) {
         self.queue = queue
         self.counter = counter
@@ -77,9 +99,34 @@ open class AsyncTimer {
         self.completion = completion
     }
 
+    /// Destroy the timer
+    deinit {
+        self.stop()
+    }
+
     /// Start the timer
     open func start() {
-        self.initCountDown(self.counter)
+        guard self.terminator == nil else {
+            return
+        }
+        let terminator = Terminator(self.counter)
+        self.update(.now(), with: terminator)
+        self.terminator = terminator
+    }
+
+    /// Pause the timer
+    open func pause() {
+        self.terminator?.paused = true
+    }
+
+    /// Resume the timer
+    open func resume() {
+        guard let old = self.terminator, old.paused else {
+            return
+        }
+        let terminator = Terminator(old.counter)
+        self.update(.now(), with: terminator)
+        self.terminator = terminator
     }
 
     /// Stop the timer
@@ -94,30 +141,23 @@ open class AsyncTimer {
         self.start()
     }
 
-    private func initCountDown(_ counter: Counter) {
-        guard self.terminator == nil else {
+    private func update(_ time: DispatchTime, with terminator: Terminator) {
+        if terminator.stopped || terminator.paused {
             return
         }
-        let terminator = Terminator()
-        self.countDown(.now(), counter: counter, with: terminator)
-        self.terminator = terminator
-    }
 
-    private func countDown(_ time: DispatchTime, counter: Counter, with terminator: Terminator) {
-        guard !terminator.stopped else {
-            return
-        }
-        let value = counter.value
-        guard value > 0 else {
+        if terminator.completed {
             self.stop()
             self.block(0)
             self.completion()
+
             return
         }
+
         let nextTime = time + self.interval
         self.queue.asyncAfter(deadline: nextTime) { [weak self] in
-            self?.countDown(nextTime, counter: counter.next, with: terminator)
+            self?.update(nextTime, with: terminator.next)
         }
-        self.block(value)
+        self.block(terminator.counter.value)
     }
 }

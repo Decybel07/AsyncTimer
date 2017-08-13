@@ -7,5 +7,25 @@
 //
 
 internal class Terminator {
+
+    var counter: Counter
+
     var stopped: Bool = false
+    var paused: Bool = false
+
+    var completed: Bool {
+        if case let .down(value) = self.counter {
+            return value <= 0
+        }
+        return false
+    }
+
+    var next: Terminator {
+        self.counter = self.counter.next
+        return self
+    }
+
+    init(_ counter: Counter) {
+        self.counter = counter
+    }
 }
