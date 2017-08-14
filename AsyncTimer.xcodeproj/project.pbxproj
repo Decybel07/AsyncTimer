@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D9454B91F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
-		2D9454BA1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
-		2D9454BB1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
-		2D9454BC1F092D390091BD6B /* Terminator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Terminator.swift */; };
+		2D9454B91F092D390091BD6B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Task.swift */; };
+		2D9454BA1F092D390091BD6B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Task.swift */; };
+		2D9454BB1F092D390091BD6B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Task.swift */; };
+		2D9454BC1F092D390091BD6B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9454B81F092D390091BD6B /* Task.swift */; };
 		2D94555F1F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
 		2D9455601F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
 		2D9455611F1B408D0091BD6B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94555E1F1B408D0091BD6B /* Counter.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D9454B81F092D390091BD6B /* Terminator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminator.swift; sourceTree = "<group>"; };
+		2D9454B81F092D390091BD6B /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		2D9454C81F097A580091BD6B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2D9454C91F097A580091BD6B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		2D9454CA1F097A580091BD6B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				2DD9D5951EFAEBDB005BFB68 /* AsyncTimer.h */,
 				2DD9D5961EFAEBDB005BFB68 /* Info.plist */,
 				2DD9D59F1EFAED77005BFB68 /* AsyncTimer.swift */,
-				2D9454B81F092D390091BD6B /* Terminator.swift */,
+				2D9454B81F092D390091BD6B /* Task.swift */,
 				2D94555E1F1B408D0091BD6B /* Counter.swift */,
 			);
 			path = Source;
@@ -316,7 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D94555F1F1B408D0091BD6B /* Counter.swift in Sources */,
-				2D9454B91F092D390091BD6B /* Terminator.swift in Sources */,
+				2D9454B91F092D390091BD6B /* Task.swift in Sources */,
 				2DD9D5A01EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9455601F1B408D0091BD6B /* Counter.swift in Sources */,
-				2D9454BA1F092D390091BD6B /* Terminator.swift in Sources */,
+				2D9454BA1F092D390091BD6B /* Task.swift in Sources */,
 				2DD9D5A11EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9455611F1B408D0091BD6B /* Counter.swift in Sources */,
-				2D9454BB1F092D390091BD6B /* Terminator.swift in Sources */,
+				2D9454BB1F092D390091BD6B /* Task.swift in Sources */,
 				2DD9D5A21EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9455621F1B408D0091BD6B /* Counter.swift in Sources */,
-				2D9454BC1F092D390091BD6B /* Terminator.swift in Sources */,
+				2D9454BC1F092D390091BD6B /* Task.swift in Sources */,
 				2DD9D5A31EFAED77005BFB68 /* AsyncTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

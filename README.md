@@ -102,6 +102,18 @@ AsyncTimer(interval: .seconds(2)) {
 timer.start()
 ```
 
+#### Pause the timer
+
+```swift
+timer.pause()
+```
+
+#### Resume the timer
+
+```swift
+timer.resume()
+```
+
 #### Stop the timer
 
 ```swift

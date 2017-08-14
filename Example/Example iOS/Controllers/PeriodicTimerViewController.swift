@@ -26,17 +26,27 @@ final class PeriodicTimerViewController: UIViewController {
         return formatter
     }()
     
-    @IBAction func onStart() {
+    @IBAction private func onStart() {
         self.statusLabel.text = "started"
         self.timer.start()
     }
     
-    @IBAction func onStop() {
+    @IBAction private func onPause() {
+        self.statusLabel.text = "paused"
+        self.timer.pause()
+    }
+    
+    @IBAction private func onResume() {
+        self.statusLabel.text = "resumed"
+        self.timer.resume()
+    }
+    
+    @IBAction private func onStop() {
         self.statusLabel.text = "stopped"
         self.timer.stop()
     }
     
-    @IBAction func onRestart() {
+    @IBAction private func onRestart() {
         self.statusLabel.text = "restarted"
         self.timer.restart()
     }
@@ -44,4 +54,5 @@ final class PeriodicTimerViewController: UIViewController {
     private func updateCurrentTime() {
         self.timeLabel.text = self.dateFormatter.string(from: Date())
     }
+    
 }

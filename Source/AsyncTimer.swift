@@ -17,7 +17,31 @@ open class AsyncTimer {
 
     private let block: (Int) -> Void
     private let completion: () -> Void
-    private weak var terminator: Terminator?
+    private var task: Task?
+
+    /// A Boolean value that determines whether the timer is paused.
+    public var isPaused: Bool {
+        return self.task?.isSuspended ?? false
+    }
+
+    /// A Boolean value that determines whether the timer is stopped.
+    public var isStopped: Bool {
+        return self.task == nil
+    }
+
+    /// A Boolean value that determines whether the timer is running.
+    public var isRunning: Bool {
+        return !(self.isStopped || self.isPaused)
+    }
+
+    /// An Integer value that determines the number of remaining iterations.
+    /// If the timer is infinity or stopped then return nil
+    public var value: Int? {
+        if let counter = self.task?.counter, case let .down(value) = counter {
+            return value
+        }
+        return nil
+    }
 
     /**
      Initialize a new AsyncTimer. A timer waits until a certain time **interval** has elapsed and then call the **block** clause.
@@ -36,9 +60,9 @@ open class AsyncTimer {
         block: @escaping () -> Void = {}
     ) {
         if repeats {
-            self.init(queue: queue, interval: interval, counter: .infinity, block: { _ in block() }, completion: {})
+            self.init(queue: queue, interval: interval, counter: .infinity, block: { _ in block() })
         } else {
-            self.init(queue: queue, interval: interval, counter: .down(1), block: { _ in }, completion: block)
+            self.init(queue: queue, interval: interval, counter: .down(1), completion: block)
         }
     }
 
@@ -67,8 +91,8 @@ open class AsyncTimer {
         queue: DispatchQueue,
         interval: DispatchTimeInterval,
         counter: Counter,
-        block: @escaping (Int) -> Void,
-        completion: @escaping () -> Void
+        block: @escaping (Int) -> Void = { _ in },
+        completion: @escaping () -> Void = {}
     ) {
         self.queue = queue
         self.counter = counter
@@ -77,15 +101,36 @@ open class AsyncTimer {
         self.completion = completion
     }
 
+    /// Destroy the timer
+    deinit {
+        self.stop()
+    }
+
     /// Start the timer
     open func start() {
-        self.initCountDown(self.counter)
+        guard self.task == nil else {
+            return
+        }
+        self.startTask(Task(self.counter))
+    }
+
+    /// Pause the timer
+    open func pause() {
+        self.task?.isSuspended = true
+    }
+
+    /// Resume the timer
+    open func resume() {
+        guard let task = self.task, task.isSuspended else {
+            return
+        }
+        self.startTask(Task(task))
     }
 
     /// Stop the timer
     open func stop() {
-        self.terminator?.stopped = true
-        self.terminator = nil
+        self.pause()
+        self.task = nil
     }
 
     /// Restart the timer
@@ -94,30 +139,27 @@ open class AsyncTimer {
         self.start()
     }
 
-    private func initCountDown(_ counter: Counter) {
-        guard self.terminator == nil else {
-            return
-        }
-        let terminator = Terminator()
-        self.countDown(.now(), counter: counter, with: terminator)
-        self.terminator = terminator
+    private func startTask(_ task: Task) {
+        self.task = task
+        self.update(task.getStartTime(), with: task)
     }
 
-    private func countDown(_ time: DispatchTime, counter: Counter, with terminator: Terminator) {
-        guard !terminator.stopped else {
+    private func update(_ time: DispatchTime, with task: Task) {
+        if task.isSuspended {
             return
         }
-        let value = counter.value
-        guard value > 0 else {
+        if task.isCompleted {
             self.stop()
             self.block(0)
             self.completion()
             return
         }
+
+        task.startedTime = time
         let nextTime = time + self.interval
         self.queue.asyncAfter(deadline: nextTime) { [weak self] in
-            self?.countDown(nextTime, counter: counter.next, with: terminator)
+            self?.update(nextTime, with: task.next)
         }
-        self.block(value)
+        self.block(task.counter.value)
     }
 }

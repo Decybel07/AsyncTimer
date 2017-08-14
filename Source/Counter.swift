@@ -12,17 +12,25 @@ internal enum Counter {
 }
 
 internal extension Counter {
+
     var next: Counter {
-        switch self {
-        case .infinity: return self
-        case let .down(value): return .down(value - 1)
+        if case let .down(value) = self {
+            return .down(value - 1)
         }
+        return self
+    }
+
+    var previous: Counter {
+        if case let .down(value) = self {
+            return .down(value + 1)
+        }
+        return self
     }
 
     var value: Int {
-        switch self {
-        case .infinity: return Int.max
-        case let .down(value): return value
+        if case let .down(value) = self {
+            return value
         }
+        return Int.max
     }
 }
