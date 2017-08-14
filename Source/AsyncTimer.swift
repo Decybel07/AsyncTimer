@@ -17,16 +17,16 @@ open class AsyncTimer {
 
     private let block: (Int) -> Void
     private let completion: () -> Void
-    private var terminator: Terminator?
+    private var task: Task?
 
     /// A Boolean value that determines whether the timer is paused.
     public var isPaused: Bool {
-        return self.terminator?.paused ?? false
+        return self.task?.isSuspended ?? false
     }
 
     /// A Boolean value that determines whether the timer is stopped.
     public var isStopped: Bool {
-        return self.terminator == nil
+        return self.task == nil
     }
 
     /// A Boolean value that determines whether the timer is running.
@@ -34,8 +34,10 @@ open class AsyncTimer {
         return !(self.isStopped || self.isPaused)
     }
 
-    public var left: Int? {
-        if let counter = self.terminator?.counter, case let .down(value) = counter {
+    /// An Integer value that determines the number of remaining iterations.
+    /// If the timer is infinity or stopped then return nil
+    public var value: Int? {
+        if let counter = self.task?.counter, case let .down(value) = counter {
             return value
         }
         return nil
@@ -106,33 +108,29 @@ open class AsyncTimer {
 
     /// Start the timer
     open func start() {
-        guard self.terminator == nil else {
+        guard self.task == nil else {
             return
         }
-        let terminator = Terminator(self.counter)
-        self.update(.now(), with: terminator)
-        self.terminator = terminator
+        self.startTask(Task(self.counter))
     }
 
     /// Pause the timer
     open func pause() {
-        self.terminator?.paused = true
+        self.task?.isSuspended = true
     }
 
     /// Resume the timer
     open func resume() {
-        guard let old = self.terminator, old.paused else {
+        guard let task = self.task, task.isSuspended else {
             return
         }
-        let terminator = Terminator(old.counter)
-        self.update(.now(), with: terminator)
-        self.terminator = terminator
+        self.startTask(Task(task))
     }
 
     /// Stop the timer
     open func stop() {
-        self.terminator?.stopped = true
-        self.terminator = nil
+        self.pause()
+        self.task = nil
     }
 
     /// Restart the timer
@@ -141,23 +139,27 @@ open class AsyncTimer {
         self.start()
     }
 
-    private func update(_ time: DispatchTime, with terminator: Terminator) {
-        if terminator.stopped || terminator.paused {
+    private func startTask(_ task: Task) {
+        self.task = task
+        self.update(task.getStartTime(), with: task)
+    }
+
+    private func update(_ time: DispatchTime, with task: Task) {
+        if task.isSuspended {
             return
         }
-
-        if terminator.completed {
+        if task.isCompleted {
             self.stop()
             self.block(0)
             self.completion()
-
             return
         }
 
+        task.startedTime = time
         let nextTime = time + self.interval
         self.queue.asyncAfter(deadline: nextTime) { [weak self] in
-            self?.update(nextTime, with: terminator.next)
+            self?.update(nextTime, with: task.next)
         }
-        self.block(terminator.counter.value)
+        self.block(task.counter.value)
     }
 }

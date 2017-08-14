@@ -20,7 +20,6 @@ final class CountdownTimerViewController: UIViewController {
             times: 25,
             block: { [weak self] value in
                 self?.valueLabel.text = value.description
-                print(self?.timer.left)
             }, completion: { [weak self] value in
                 self?.statusLabel.text = "finished"
             }

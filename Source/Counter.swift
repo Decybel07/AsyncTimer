@@ -20,6 +20,13 @@ internal extension Counter {
         return self
     }
 
+    var previous: Counter {
+        if case let .down(value) = self {
+            return .down(value + 1)
+        }
+        return self
+    }
+
     var value: Int {
         if case let .down(value) = self {
             return value
