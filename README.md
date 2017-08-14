@@ -15,7 +15,7 @@
 - [x] Can work as a periodic Timer
 - [x] Can work as a scheduled timer
 - [x] Working with user events (like: scrolling, tapping, ...)
-- [x] Functionality (start, stop, restart)
+- [x] Functionality (start, pause, resume, stop, restart)
 - [x] Support for clousure (never more selectors)
 
 ## 💻 Demo
@@ -92,39 +92,7 @@ Do something after 2 seconds
 AsyncTimer(interval: .seconds(2)) {
     print("something to do")
 }
-```
-
-### Functionalities
-
-#### Start the timer
-
-```swift
-timer.start()
-```
-
-#### Pause the timer
-
-```swift
-timer.pause()
-```
-
-#### Resume the timer
-
-```swift
-timer.resume()
-```
-
-#### Stop the timer
-
-```swift
-timer.stop()
-```
-
-#### Resrart the timer
-
-```swift
-timer.restart()
-```
+`````
 
 ## 🤓 Author
 
