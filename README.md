@@ -18,6 +18,16 @@
 - [x] Functionality (start, pause, resume, stop, restart)
 - [x] Support for clousure (never more selectors)
 
+##  Overview
+
+<p align="center">
+<table><tr>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/AsyncTimer/master/Images/countdown720.gif" alt="Countdown timer"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/AsyncTimer/master/Images/Periodic720.gif" alt="Periodic timer"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/AsyncTimer/master/Images/scheduled720.gif" alt="scheduled timer"/></td>
+</tr></table>
+</p>
+
 ## 💻 Demo
 
 ```ruby
