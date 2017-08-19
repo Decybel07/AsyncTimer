@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name             = 'AsyncTimer'
-  spec.version          = '2.1.0'
+  spec.version          = '2.1.1'
   spec.summary          = 'AsyncTimer is a precision asynchronous timer. You can also use it as a countdown timer'
 
   spec.description      = <<-DESC
