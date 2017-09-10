@@ -5,6 +5,7 @@
 [![Language Swift3](https://img.shields.io/badge/languages-Swift%203.0+-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/AsyncTimer.svg?style=flat&label=platform)](http://cocoapods.org/pods/AsyncTimer)
 [![CocoaPods License](https://img.shields.io/cocoapods/l/AsyncTimer.svg?style=flat&label=license)](https://github.com/Decybel07/AsyncTimer/blob/master/LICENSE)
+[![Docs percent](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](http://cocoadocs.org/docsets/AsyncTimer/)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
 [![codebeat badge](https://codebeat.co/badges/648d2a8b-2cb5-4956-b19c-454dc35912fd)](https://codebeat.co/projects/github-com-decybel07-asynctimer-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63d5b063f7ba44dfb4d96447886aff3a)](https://www.codacy.com/app/Decybel07/AsyncTimer/dashboard)
@@ -66,6 +67,11 @@ github "Decybel07/AsyncTimer", ~> 2.0
 ```
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/AsyncTimer/)
+
+Import AsyncTimer at the top of each Swift file that will use framework.
+```swift
+import AsyncTimer
+```
 
 ### Countdown Timer
 
