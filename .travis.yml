@@ -2,42 +2,42 @@ osx_image: xcode9.0
 language: objective-c
 
 env:
-global:
-- LC_CTYPE=en_US.UTF-8
-- WORKSPACE=AsyncTimer.xcworkspace
-- IOS="iOS"
-- MACOS="macOS"
-- TVOS="tvOS"
-- WATCHOS="watchOS"
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - WORKSPACE=AsyncTimer.xcworkspace
+    - IOS="iOS"
+    - MACOS="macOS"
+    - TVOS="tvOS"
+    - WATCHOS="watchOS"
 
-matrix:
-- DESTINATION="OS=9.1,name=iPad Retina"                   PLATFORM="$IOS"
-- DESTINATION="OS=9.2,name=iPad Air 2"                    PLATFORM="$IOS"
-- DESTINATION="OS=10.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"
+  matrix:
+    - DESTINATION="OS=9.1,name=iPad Retina"                   PLATFORM="$IOS"
+    - DESTINATION="OS=9.2,name=iPad Air 2"                    PLATFORM="$IOS"
+    - DESTINATION="OS=10.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"
 
-- DESTINATION="OS=10.0,name=iPhone 5s"                    PLATFORM="$IOS"
-- DESTINATION="OS=10.2,name=iPhone 7"                     PLATFORM="$IOS"
-- DESTINATION="OS=11.0,name=iPhone X"                     PLATFORM="$IOS"
+    - DESTINATION="OS=10.0,name=iPhone 5s"                    PLATFORM="$IOS"
+    - DESTINATION="OS=10.2,name=iPhone 7"                     PLATFORM="$IOS"
+    - DESTINATION="OS=11.0,name=iPhone X"                     PLATFORM="$IOS"
 
-- DESTINATION="OS=2.0,name=Apple Watch - 38mm"            PLATFORM="$WATCHOS"
-- DESTINATION="OS=3.2,name=Apple Watch Series 2 - 38mm"   PLATFORM="$WATCHOS"
-- DESTINATION="OS=4.0,name=Apple Watch Series 3 - 42mm"   PLATFORM="$WATCHOS"
+    - DESTINATION="OS=2.0,name=Apple Watch - 38mm"            PLATFORM="$WATCHOS"
+    - DESTINATION="OS=3.2,name=Apple Watch Series 2 - 38mm"   PLATFORM="$WATCHOS"
+    - DESTINATION="OS=4.0,name=Apple Watch Series 3 - 42mm"   PLATFORM="$WATCHOS"
 
-- DESTINATION="OS=9.0,name=Apple TV 1080p"                PLATFORM="$TVOS"
-- DESTINATION="OS=10.2,name=Apple TV 1080p"               PLATFORM="$TVOS"
-- DESTINATION="OS=11.0,name=Apple TV 4K"                  PLATFORM="$TVOS"
+    - DESTINATION="OS=9.0,name=Apple TV 1080p"                PLATFORM="$TVOS"
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"               PLATFORM="$TVOS"
+    - DESTINATION="OS=11.0,name=Apple TV 4K"                  PLATFORM="$TVOS"
 
-- DESTINATION="arch=x86_64"                               PLATFORM="$MACOS"
+    - DESTINATION="arch=x86_64"                               PLATFORM="$MACOS"
 
 script:
-- set -o pipefail
-- xcodebuild -version
-- xcodebuild -showsdks
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
 
-- FRAMEWORK_SCHEME="AsyncTimer $PLATFORM";
+  - FRAMEWORK_SCHEME="AsyncTimer $PLATFORM";
 
-- xcodebuild -project "AsyncTimer.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-- xcodebuild -project "AsyncTimer.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
+  - xcodebuild -project "AsyncTimer.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  - xcodebuild -project "AsyncTimer.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
 
 after_script:
-- pod try AsyncTimer;
+  - pod try AsyncTimer;
