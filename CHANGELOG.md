@@ -1,6 +1,19 @@
 
 # Change Log
 
+---
+
+# Swift 4.0
+
+## [2.2.0](https://github.com/Decybel07/L10n-swift/tree/2.1.1) (2017-10-01)
+* Migrate to Swift 4.0
+
+# Swift 4.0
+
+---
+
+# Swift 3.2
+
 ## [2.1.1](https://github.com/Decybel07/L10n-swift/tree/2.1.1) (2017-08-19)
 * Added gifs to README
 

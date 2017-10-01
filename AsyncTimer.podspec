@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name             = 'AsyncTimer'
-  spec.version          = '2.1.1'
+  spec.version          = '2.2.0'
   spec.summary          = 'AsyncTimer is a precision asynchronous timer. You can also use it as a countdown timer'
 
   spec.description      = <<-DESC
@@ -17,6 +17,8 @@ Pod::Spec.new do |spec|
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
   spec.source           = { :git => "https://github.com/Decybel07/AsyncTimer.git", :tag => spec.version }
+
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   spec.ios.deployment_target = '9.0'
   spec.osx.deployment_target = '10.10'

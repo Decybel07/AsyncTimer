@@ -51,13 +51,13 @@ pod try AsyncTimer
 ### [CocoaPods](http://cocoapods.org)
 
 ```ruby
-pod 'AsyncTimer', '~> 2.0'
+pod 'AsyncTimer', '~> 2.2'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/AsyncTimer", ~> 2.0
+github "Decybel07/AsyncTimer", ~> 2.2
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
