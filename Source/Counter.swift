@@ -13,24 +13,25 @@ internal enum Counter {
 
 internal extension Counter {
 
-    var next: Counter {
-        if case let .down(value) = self {
-            return .down(value - 1)
-        }
-        return self
-    }
-
-    var previous: Counter {
-        if case let .down(value) = self {
-            return .down(value + 1)
-        }
-        return self
-    }
-
     var value: Int {
         if case let .down(value) = self {
             return value
         }
         return Int.max
+    }
+
+    var next: Counter {
+        return self.offset(by: 1)
+    }
+
+    var previous: Counter {
+        return self.offset(by: -1)
+    }
+
+    private func offset(by offset: Int) -> Counter {
+        if case let .down(value) = self {
+            return .down(value - offset)
+        }
+        return self
     }
 }
